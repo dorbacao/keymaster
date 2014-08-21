@@ -16,7 +16,7 @@
     },
     // special keys
     _MAP = {
-      backspace: 8, tab: 9, clear: 12,
+      backspace: 8, tab: 9, clear: 12, insert:45,
       enter: 13, 'return': 13,
       esc: 27, escape: 27, space: 32,
       left: 37, up: 38,
@@ -83,7 +83,7 @@
 
     // see if we need to ignore the keypress (filter() can can be overridden)
     // by default ignore key presses if a select, textarea, or input is focused
-    if(!assignKey.filter.call(this, event)) return;
+    //if(!assignKey.filter.call(this, event)) return;
 
     // abort if no potentially matching shortcuts found
     if (!(key in _handlers)) return;
